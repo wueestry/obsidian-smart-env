@@ -188,7 +188,7 @@ export class SmartEnv extends BaseSmartEnv {
       this.status_container = this.status_elm.createEl('a', {
         cls: 'smart-env-status-container',
       });
-      setIcon(this.status_container, 'smart-connections');
+      setIcon(this.status_container, 'smart-network');
 
       /* span used for dynamic message */
       this.status_msg = this.status_container.createSpan(
@@ -224,7 +224,7 @@ export class SmartEnv extends BaseSmartEnv {
     }
 
     /* ---------- NO QUEUE → normal status ---------- */
-    this.status_msg.setText('Smart Env ' + this.constructor.version);
+    this.status_msg.setText('Smart Network ' + this.constructor.version);
     this.status_container.setAttribute('title', 'Smart Environment status');
     this.status_container.removeEventListener('click', re_embed_click_handler);
 
@@ -340,7 +340,7 @@ export class SmartEnv extends BaseSmartEnv {
   }
   async wait_for_obsidian_sync() {
     while (this.obsidian_is_syncing) {
-      console.log("Smart Connections: Waiting for Obsidian Sync to finish");
+      console.log("Smart Network: Waiting for Obsidian Sync to finish");
       await new Promise(r => setTimeout(r, 1000));
       if(!this.plugin) throw new Error("Plugin disabled while waiting for obsidian sync, reload required."); // if plugin is disabled, stop waiting for sync
     }

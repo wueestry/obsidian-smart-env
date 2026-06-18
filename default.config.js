@@ -70,6 +70,10 @@ const smart_env_config = {
         gemini: GeminiEmbedModelAdapter,
         lm_studio: LmStudioEmbedModelAdapter,
       },
+      http_adapter: new SmartHttpRequest({
+        adapter: SmartHttpObsidianRequestAdapter,
+        obsidian_request_url: requestUrl,
+      }),
     },
     smart_chat_model: {
       class: SmartChatModel,

@@ -27,7 +27,7 @@ export function render(plugin, opts={}) {
   const frag = this.create_doc_fragment(html);
   const callout = frag.querySelector('#footer-callout');
   const icon_container = callout.querySelector('.callout-icon');
-  const icon = getIcon('smart-connections');
+  const icon = getIcon('smart-network');
   if (icon) {
     this.empty(icon_container);
     icon_container.appendChild(icon);

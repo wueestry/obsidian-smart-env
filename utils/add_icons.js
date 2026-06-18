@@ -12,11 +12,13 @@ export function add_smart_chat_icon() {
 }
 
 export function add_smart_connections_icon() {
-    addIcon("smart-connections", `<path d="M50,20 L80,40 L80,60 L50,100" stroke="currentColor" stroke-width="4" fill="none"/>
+    const svg = `<path d="M50,20 L80,40 L80,60 L50,100" stroke="currentColor" stroke-width="4" fill="none"/>
     <path d="M30,50 L55,70" stroke="currentColor" stroke-width="5" fill="none"/>
     <circle cx="50" cy="20" r="9" fill="currentColor"/>
     <circle cx="80" cy="40" r="9" fill="currentColor"/>
     <circle cx="80" cy="70" r="9" fill="currentColor"/>
     <circle cx="50" cy="100" r="9" fill="currentColor"/>
-    <circle cx="30" cy="50" r="9" fill="currentColor"/>`);
+    <circle cx="30" cy="50" r="9" fill="currentColor"/>`;
+    addIcon("smart-connections", svg);
+    addIcon("smart-network", svg);
 }
